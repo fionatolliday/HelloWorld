@@ -4,12 +4,15 @@ import java.util.stream.Collectors;
 
 public class World {
 
-    List<Person> people = new ArrayList<>();
+    List<Person> people;
 
 
     public World(Person person) {
+        this.people = new ArrayList<>();
+
         Person fiona = new Person("Fiona");
         people.add(fiona);
+
     }
 
     public List<Person> addPerson(Person person) {
@@ -19,18 +22,11 @@ public class World {
 
     public List<Person> removePerson(Person person) {
         people.remove(person);
+//        int indexOfPersonToRemove = people.indexOf(name);
+//        people.remove(indexOfPersonToRemove);
+
         return people;
     }
-
-
-//    public List<String> names (List<Person> people){
-//        List<String> names = new ArrayList<>();
-//
-//        for(int i = 0; i < people.size(); i++){
-//            names =  people.get(i).getName();
-//        }
-//        return names;
-//    }
 
 
     public String greet(List<Person> people) {
