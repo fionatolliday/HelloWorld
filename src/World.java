@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class World {
 
@@ -16,29 +17,51 @@ public class World {
         return people;
     }
 
+    public List<Person> removePerson(Person person) {
+        people.remove(person);
+        return people;
+    }
+
+
+//    public List<String> names (List<Person> people){
+//        List<String> names = new ArrayList<>();
+//
+//        for(int i = 0; i < people.size(); i++){
+//            names =  people.get(i).getName();
+//        }
+//        return names;
+//    }
+
 
     public String greet(List<Person> people) {
+        List<String> names = new ArrayList<>();
 
-        if (people.size() == 2) {
+        for (Person person : people) {
+            names.add(person.getName());
+        }
 
-            return "Hello " + people.get(0).getName() + " and " + people.get(1).getName() +
-                    " - the time on the" +
-                    " server" +
-                    " is " +
-                    "10:48pm on " +
-                    "14 " +
-                    "March " +
-                    "2018";
-        } else return "Hello " + people.get(0).getName() + " and " + people.get(1).getName() +
-                " - " +
-                "the time on" +
-                " the" +
-                " " +
-                "server" +
-                " is " +
-                "10:48pm on " +
-                "14 " +
-                "March " +
-                "2018";
+        String nameString = names.size() > 1
+                ? String.join(", ", names.subList(0, people.size() - 1))
+                .concat(String.format("%s and ", people.size() > 2 ? "" : ""))
+                .concat(names.get(people.size() - 1))
+                : names.get(0);
+
+        return "Hello " + nameString + " - the time on the server is 10:48pm on 14 March 2018";
     }
+
+
 }
+
+
+//    int num = 8;
+//    String msg = "";
+//          if(num > 10) {
+//        msg = "Number is greater than 10";
+//        }
+//        else {
+//        msg = "Number is less than or equal to 10";
+//        }
+
+//    final String msg = num > 10
+//            ? "Number is greater than 10"
+//            : "Number is less than or equal to 10";
