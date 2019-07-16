@@ -9,6 +9,8 @@ import com.sun.net.httpserver.HttpServer;
 
 public class Main {
 
+    World world = new World(new Person("Fiona"));
+
     public static void main(String[] args) throws IOException {
          HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
             server.createContext("/test", new MyHandler());
@@ -19,12 +21,17 @@ public class Main {
         static class MyHandler implements HttpHandler {
             @Override
             public void handle(HttpExchange t) throws IOException {
-                String response = "This is the response";
+                World world = new World(new Person("Fiona"));
+
+                String response = world.greet(world.listOfNames(world.people));
                 t.sendResponseHeaders(200, response.length());
                 OutputStream os = t.getResponseBody();
                 os.write(response.getBytes());
                 os.close();
             }
+
+
+
         }
 
 
