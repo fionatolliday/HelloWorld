@@ -1,6 +1,7 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class World {
 
@@ -15,26 +16,60 @@ public class World {
 
     }
 
+    public boolean checkListForPerson(List<Person> people){
+        for (Person person: people) {
+            if(person.getName().equals(person)){
+                return true;
+            }
+        } return true;
+    }
+
     public List<Person> addPerson(Person person) {
-        people.add(person);
+
+        for (Person name : people) {
+            if (!people.contains(name)){
+                people.add(name);
+            } else throw new IllegalArgumentException( "Person already exists. Please choose " +
+                    "another.");
+        }
         return people;
     }
 
     public List<Person> removePerson(Person person) {
         people.remove(person);
-//        int indexOfPersonToRemove = people.indexOf(name);
-//        people.remove(indexOfPersonToRemove);
-
         return people;
     }
 
 
-    public String greet(List<Person> people) {
+    public List<String> listOfNames(List<Person> people){
         List<String> names = new ArrayList<>();
 
         for (Person person : people) {
             names.add(person.getName());
         }
+
+        return names;
+    }
+
+    public String dateTime(){
+        LocalDateTime myDateObj = LocalDateTime.now();
+
+        DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
+        DateTimeFormatter formattedDate = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+
+        String time = myDateObj.format(formattedTime);
+        String date = myDateObj.format(formattedDate);
+
+        return " - the time on the server is " + time + " on " + date;
+    }
+
+
+    public String greet(List<String> names) {
+//        List<String> names = new ArrayList<>();
+//
+//        for (Person person : people) {
+//            names.add(person.getName());
+//        }
 
         String nameString = names.size() > 1
                 ? String.join(", ", names.subList(0, people.size() - 1))
@@ -42,7 +77,7 @@ public class World {
                 .concat(names.get(people.size() - 1))
                 : names.get(0);
 
-        return "Hello " + nameString + " - the time on the server is 10:48pm on 14 March 2018";
+        return "Hello " + nameString + dateTime();
     }
 
 
