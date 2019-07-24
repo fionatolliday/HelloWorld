@@ -7,41 +7,15 @@ public class World {
 
     List<Person> people;
 
-
     public World(Person person) {
         this.people = new ArrayList<>();
 
         Person fiona = new Person("Fiona");
         people.add(fiona);
-
-    }
-
-    public boolean checkListForPerson(List<Person> people){
-        for (Person person: people) {
-            if(person.getName().equals(person)){
-                return true;
-            }
-        } return true;
-    }
-
-    public List<Person> addPerson(Person person) {
-
-        for (Person name : people) {
-            if (!people.contains(name)){
-                people.add(name);
-            } else throw new IllegalArgumentException( "Person already exists. Please choose " +
-                    "another.");
-        }
-        return people;
-    }
-
-    public List<Person> removePerson(Person person) {
-        people.remove(person);
-        return people;
     }
 
 
-    public List<String> listOfNames(List<Person> people){
+    public List<String> listOfPeopleInWorld(List<Person> people){
         List<String> names = new ArrayList<>();
 
         for (Person person : people) {
@@ -51,7 +25,7 @@ public class World {
         return names;
     }
 
-    public String dateTime(){
+    private String dateTime(){
         LocalDateTime myDateObj = LocalDateTime.now();
 
         DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
@@ -64,12 +38,7 @@ public class World {
     }
 
 
-    public String greet(List<String> names) {
-//        List<String> names = new ArrayList<>();
-//
-//        for (Person person : people) {
-//            names.add(person.getName());
-//        }
+    public String greet(List<String> names, List<Person> people) {
 
         String nameString = names.size() > 1
                 ? String.join(", ", names.subList(0, people.size() - 1))
@@ -81,18 +50,14 @@ public class World {
     }
 
 
+
+    @Override
+    public String toString() {
+        return "World{" +
+                "people=" + people +
+                '}';
+    }
+
+
+
 }
-
-
-//    int num = 8;
-//    String msg = "";
-//          if(num > 10) {
-//        msg = "Number is greater than 10";
-//        }
-//        else {
-//        msg = "Number is less than or equal to 10";
-//        }
-
-//    final String msg = num > 10
-//            ? "Number is greater than 10"
-//            : "Number is less than or equal to 10";
