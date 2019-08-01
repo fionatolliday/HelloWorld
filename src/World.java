@@ -5,27 +5,26 @@ import java.util.List;
 
 public class World {
 
-    List<Person> people;
+    PersonStorage storage;
 
-    public World(Person person) {
-        this.people = new ArrayList<>();
-
-        Person fiona = new Person("Fiona");
-        people.add(fiona);
+    public World(PersonStorage storage) {
+        this.storage = storage;
+        Person Fiona = new Person("Fiona");
+        this.storage.addPerson(Fiona);
     }
 
 
-    public List<String> listOfPeopleInWorld(List<Person> people){
+    public List<String> getNamesOfPeople() {
         List<String> names = new ArrayList<>();
-
-        for (Person person : people) {
-            names.add(person.getName());
+        for (Person person : storage.getPeople()) {
+            String name = person.getName();
+            names.add(name);
         }
-
         return names;
     }
 
-    private String dateTime(){
+
+    private String dateTime() {
         LocalDateTime myDateObj = LocalDateTime.now();
 
         DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
@@ -38,8 +37,9 @@ public class World {
     }
 
 
-    public String greet(List<String> names, List<Person> people) {
-
+    public String greet() {
+        List<String> names = getNamesOfPeople();
+        List<Person> people = storage.getPeople();
         String nameString = names.size() > 1
                 ? String.join(", ", names.subList(0, people.size() - 1))
                 .concat(String.format("%s and ", people.size() > 2 ? "" : ""))
@@ -49,15 +49,11 @@ public class World {
         return "Hello " + nameString + dateTime();
     }
 
-
-
     @Override
     public String toString() {
         return "World{" +
-                "people=" + people +
+                "people=" + storage.getPeople() +
                 '}';
     }
-
-
 
 }
