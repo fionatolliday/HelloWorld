@@ -11,8 +11,9 @@ public class Main {
     World world = new World(new LocalPersonStorage());
 
          HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-            server.createContext("/test", new MyHandler(world));
-            server.createContext("/names", new MyNameHandler(world));
+            server.createContext("/greeting", new GreetingHandler(world));
+            server.createContext("/names", new NameHandler(world));
+//            server.createContext("/get", new GetHandler());
             server.setExecutor(null); // creates a default executor. this submits a new task
             server.start();
         }

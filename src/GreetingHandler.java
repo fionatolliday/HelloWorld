@@ -1,13 +1,13 @@
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+
 import java.io.IOException;
 import java.io.OutputStream;
 
-class MyHandler implements HttpHandler {
-
+public class GreetingHandler implements HttpHandler {
     private World world;
 
-    public MyHandler(World world) {
+    public GreetingHandler(World world) {
         this.world = world;
     }
 
@@ -19,5 +19,4 @@ class MyHandler implements HttpHandler {
         os.write(response.getBytes());
         os.close();
     }
-
 }
