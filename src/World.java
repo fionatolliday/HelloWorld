@@ -13,7 +13,6 @@ public class World {
         this.storage.addPerson(Fiona);
     }
 
-
     public List<String> getNamesOfPeople() {
         List<String> names = new ArrayList<>();
         for (Person person : storage.getPeople()) {
@@ -55,5 +54,6 @@ public class World {
                 "people=" + storage.getPeople() +
                 '}';
     }
+
 
 }

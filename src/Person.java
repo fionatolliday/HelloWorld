@@ -8,8 +8,9 @@ public class Person {
     }
 
     public Person(String name){
-        this.name = name;
+        this.name = name.toLowerCase();
     }
+
 
     @Override
     public String toString() {
@@ -17,4 +18,6 @@ public class Person {
                 "name='" + name + '\'' +
                 '}';
     }
+
+
 }

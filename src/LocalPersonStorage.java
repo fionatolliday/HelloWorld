@@ -1,50 +1,57 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class LocalPersonStorage implements PersonStorage {
 
-    private List<Person> people;
+    private HashMap<String, Person> peopleMap;
 
 
-    public LocalPersonStorage(){
-        this.people = new ArrayList<>();
+    public LocalPersonStorage() {
+        this.peopleMap = new HashMap<>();
     }
 
 
     @Override
     public List<Person> getPeople() {
-        return people;
+        return new ArrayList<>(peopleMap.values());
     }
 
 
     @Override
     public void addPerson(Person person) {
-        if (isPersonInList(people, person)) {
+        if (peopleMap.containsKey(person.getName())) {
             throw new IllegalArgumentException("Person already exists. Please choose " +
                     "another.");
         }
-        else people.add(person);
+        if (isNameFieldEmpty(person)) {
+            throw new IllegalArgumentException("No name added. Please type a name");
+        } else peopleMap.put(person.getName(), person);
+        System.out.println("OK, person/s added");
     }
 
     @Override
     public void changePerson(Person currentPerson, Person newName) {
-        people.set(getIndexOfPerson(people, currentPerson), newName);
+        removePerson(currentPerson.getName());
+        try {
+            addPerson(newName);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("No name added. Please type a name");
+        }
     }
 
     @Override
-    public void removePerson(Person person) {
-        people.remove(person);
+    public void removePerson(String name) {
+        if (peopleMap.containsKey(name)) {
+            peopleMap.remove(name);
+        } else throw new IllegalArgumentException("Person does not exist");
     }
 
-
-    private int getIndexOfPerson(List<Person> people, Person currentName){
-        return people.indexOf(currentName);
+    private boolean isNameFieldEmpty(Person personName) {
+        String name = personName.getName();
+        if (name.isEmpty()) {
+            return true;
+        }
+        return false;
     }
-
-
-    private boolean isPersonInList(List<Person> people, Person person) {
-        return people.contains(person);
-    }
-
-
 }
