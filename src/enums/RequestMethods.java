@@ -16,4 +16,5 @@ public enum RequestMethods {
     public String getRequestMethod() {
         return requestMethod;
     }
+
 }

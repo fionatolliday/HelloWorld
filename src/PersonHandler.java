@@ -8,6 +8,7 @@ import java.util.Map;
 public class PersonHandler implements HttpHandler {
 
     private final World world;
+    private String response;
 
     public PersonHandler(World world) {
         this.world = world;
@@ -18,53 +19,49 @@ public class PersonHandler implements HttpHandler {
 
         switch (request.getRequestMethod()) {
             case "GET":
-                getRequest(request);
+                response = getRequest();
                 break;
             case "POST":
-                postRequest(request);
+                response = postRequest(request);
                 break;
             case "PUT":
-                putRequest(request);
+                response = putRequest(request);
                 break;
             case "DELETE":
-                deleteRequest(request);
+                response = deleteRequest(request);
                 break;
             default:
                 notFound(request);
         }
 
+        request.sendResponseHeaders(200, response.length());
+        WriteResponse.writeResponse(request, response);
         request.close();
     }
 
-    private void getRequest(HttpExchange request) throws IOException {
-        String response;
+    private String getRequest() {
 
         try {
             response = world.getNamesOfPeople().toString();
         } catch (Exception e) {
-            response = StatusCodes.NOT_FOUND +"Exception thrown: " + e;
+            response = " Exception thrown: " + e;
         }
 
-        request.sendResponseHeaders(200, response.length());
-        WriteResponse.writeResponse(request, response);
+        return response;
     }
 
-    private void postRequest(HttpExchange request) throws IOException {
-        String response;
+    private String postRequest(HttpExchange request) {
         try {
             world.storage.addPerson(getPersonName(request));
-            response = StatusCodes.ACCEPTED + " Person added";
+            response = " Person added";
         } catch (Exception e) {
             response = "Could not be executed.  Exception thrown: " + e;
         }
-
-        request.sendResponseHeaders(200, response.length());
-        WriteResponse.writeResponse(request, response);
+        return response;
     }
 
 
-    private void putRequest(HttpExchange request) throws IOException {
-        String response;
+    private String putRequest(HttpExchange request) {
         try {
             world.storage.changePerson(getPersonName(request), getPersonNameNew(request));
             response = "OK, person updated";
@@ -72,12 +69,10 @@ public class PersonHandler implements HttpHandler {
             response = "Cannot be found";
         }
 
-        request.sendResponseHeaders(200, response.length());
-        WriteResponse.writeResponse(request, response);
+        return response;
     }
 
-    private void deleteRequest(HttpExchange request) throws IOException {
-        String response;
+    private String deleteRequest(HttpExchange request) {
         try {
             world.storage.removePerson(getPersonName(request).getName());
             response = "OK person deleted";
@@ -85,9 +80,9 @@ public class PersonHandler implements HttpHandler {
             response = "Cannot be found";
         }
 
-        request.sendResponseHeaders(200, response.length());
-        WriteResponse.writeResponse(request, response);
+        return response;
     }
+
 
     private void notFound(HttpExchange request) throws IOException {
         request.sendResponseHeaders(404, 0);
