@@ -5,6 +5,7 @@ public class WorldTest {
 
     LocalPersonStorage storage = new LocalPersonStorage();
     World world = new World(storage);
+//    read the time on the server here for the tests.
 
 
     @Test

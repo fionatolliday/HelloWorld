@@ -1,6 +1,5 @@
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import enums.StatusCodes;
 
 import java.io.*;
 import java.util.Map;
@@ -10,9 +9,11 @@ public class PersonHandler implements HttpHandler {
     private final World world;
     private String response;
 
+
     public PersonHandler(World world) {
         this.world = world;
     }
+
 
     @Override
     public void handle(HttpExchange request) throws IOException {
@@ -39,21 +40,22 @@ public class PersonHandler implements HttpHandler {
         request.close();
     }
 
-    private String getRequest() {
 
+    private String getRequest() {
         try {
             response = world.getNamesOfPeople().toString();
         } catch (Exception e) {
             response = " Exception thrown: " + e;
         }
-
         return response;
     }
 
+
     private String postRequest(HttpExchange request) {
         try {
-            world.storage.addPerson(getPersonName(request));
-            response = " Person added";
+            Person person = getPerson(request);
+            world.storage.addPerson(person);
+            response = person.getName() + " added";
         } catch (Exception e) {
             response = "Could not be executed.  Exception thrown: " + e;
         }
@@ -63,23 +65,22 @@ public class PersonHandler implements HttpHandler {
 
     private String putRequest(HttpExchange request) {
         try {
-            world.storage.changePerson(getPersonName(request), getPersonNameNew(request));
+            world.storage.changePerson(getPerson(request), getPerson(request));
             response = "OK, person updated";
         } catch (Exception e) {
             response = "Cannot be found";
         }
-
         return response;
     }
 
+
     private String deleteRequest(HttpExchange request) {
         try {
-            world.storage.removePerson(getPersonName(request).getName());
+            world.storage.removePerson(getPerson(request).getName());
             response = "OK person deleted";
         } catch (Exception e) {
             response = "Cannot be found";
         }
-
         return response;
     }
 
@@ -90,17 +91,21 @@ public class PersonHandler implements HttpHandler {
         WriteResponse.writeResponse(request, response);
     }
 
-    private Person getPersonName(HttpExchange request) {
+
+    private Person getPerson(HttpExchange request){
         Map<String, String> requestParams =
                 QueryParser.queryParse(request.getRequestURI().getQuery());
-        return new Person(requestParams.get("name"));
+
+        if (requestParams.containsKey("name")) {
+                return new Person(requestParams.get("name"));
+        }
+        else {
+            return new Person(requestParams.get("newName"));
+        }
     }
 
-    private Person getPersonNameNew(HttpExchange request) {
-        Map<String, String> requestParams =
-                QueryParser.queryParse(request.getRequestURI().getQuery());
-        return new Person(requestParams.get("newName"));
-    }
+
+
 }
 
 

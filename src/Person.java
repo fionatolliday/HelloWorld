@@ -11,13 +11,4 @@ public class Person {
         this.name = name.toLowerCase();
     }
 
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                '}';
-    }
-
-
 }
