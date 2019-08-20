@@ -65,8 +65,9 @@ public class PersonHandler implements HttpHandler {
 
     private String putRequest(HttpExchange request) {
         try {
-            world.storage.changePerson(getPerson(request), getPerson(request));
-            response = "OK, person updated";
+            Person person = getPerson(request);
+            world.storage.changePerson(person, person);
+            response = "OK, name updated";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
         }
@@ -76,8 +77,9 @@ public class PersonHandler implements HttpHandler {
 
     private String deleteRequest(HttpExchange request) {
         try {
-            world.storage.removePerson(getPerson(request).getName());
-            response = "OK person deleted";
+            Person person = getPerson(request);
+            world.storage.removePerson(person.getName());
+            response = "OK, " + person + " deleted";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
         }
