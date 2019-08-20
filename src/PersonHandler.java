@@ -68,7 +68,7 @@ public class PersonHandler implements HttpHandler {
             world.storage.changePerson(getPerson(request), getPerson(request));
             response = "OK, person updated";
         } catch (Exception e) {
-            response = "Cannot be found";
+            response = "Cannot proceed. Exception " + e;
         }
         return response;
     }
@@ -79,7 +79,7 @@ public class PersonHandler implements HttpHandler {
             world.storage.removePerson(getPerson(request).getName());
             response = "OK person deleted";
         } catch (Exception e) {
-            response = "Cannot be found";
+            response = "Cannot proceed. Exception " + e;
         }
         return response;
     }
