@@ -42,12 +42,12 @@ public class LocalPersonStorage implements PersonStorage {
 
     @Override
     public void removePerson(String name) {
-        if(peopleMap.containsKey("fiona")){
+        if(name.equals("fiona")) {
             throw new IllegalArgumentException(
                     "Fiona cannot be deleted or changed");
         }
 
-        if (peopleMap.containsKey(name)) {
+       if (peopleMap.containsKey(name)) {
             peopleMap.remove(name.toLowerCase());
         } else throw new IllegalArgumentException(
                 "Person does not exist");

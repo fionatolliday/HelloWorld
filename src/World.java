@@ -9,8 +9,8 @@ public class World {
 
     public World(PersonStorage storage) {
         this.storage = storage;
-        Person Fiona = new Person("Fiona");
-        this.storage.addPerson(Fiona);
+        Person fiona = new Person("fiona");
+        this.storage.addPerson(fiona);
     }
 
     public List<String> getNamesOfPeople() {
