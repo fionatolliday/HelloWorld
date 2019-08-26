@@ -1,5 +1,11 @@
+package handlers;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import parser.QueryParser;
+import Output.WriteResponse;
+import model.Person;
+import model.World;
 
 import java.io.*;
 import java.util.Map;
@@ -35,6 +41,7 @@ public class PersonHandler implements HttpHandler {
                 notFound(request);
         }
 
+
         request.sendResponseHeaders(200, response.length());
         WriteResponse.writeResponse(request, response);
         request.close();
@@ -54,7 +61,7 @@ public class PersonHandler implements HttpHandler {
     private String postRequest(HttpExchange request) {
         try {
             Person person = getPerson(request);
-            world.storage.addPerson(person);
+            world.getPersonStorage().addPerson(person);
             response = person.getName() + " added";
         } catch (Exception e) {
             response = "Could not be executed.  Exception thrown: " + e;
@@ -66,7 +73,7 @@ public class PersonHandler implements HttpHandler {
     private String putRequest(HttpExchange request) {
         try {
             Person person = getPerson(request);
-            world.storage.changePerson(person, person);
+            world.getPersonStorage().changePerson(person, person);
             response = "OK, name updated";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
@@ -78,7 +85,7 @@ public class PersonHandler implements HttpHandler {
     private String deleteRequest(HttpExchange request) {
         try {
             Person person = getPerson(request);
-            world.storage.removePerson(person.getName());
+            world.getPersonStorage().removePerson(person.getName());
             response = "OK, " + person + " deleted";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
@@ -89,7 +96,7 @@ public class PersonHandler implements HttpHandler {
 
     private void notFound(HttpExchange request) throws IOException {
         request.sendResponseHeaders(404, 0);
-        String response = "Person not found. Please try again. ";
+        String response = "model.Person not found. Please try again. ";
         WriteResponse.writeResponse(request, response);
     }
 

@@ -1,3 +1,7 @@
+package interfaces;
+
+import model.Person;
+
 import java.util.List;
 
 public interface PersonStorage {

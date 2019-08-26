@@ -1,13 +1,16 @@
+import model.Person;
+import model.World;
 import org.junit.Assert;
 import org.junit.Test;
+import storage.LocalPersonStorage;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class WorldTest {
 
-    LocalPersonStorage storage = new LocalPersonStorage();
-    World world = new World(storage);
+    private LocalPersonStorage storage = new LocalPersonStorage();
+    private World world = new World(storage);
 
     private String dateTime() {
         LocalDateTime myDateObj = LocalDateTime.now();

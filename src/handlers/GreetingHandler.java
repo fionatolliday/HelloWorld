@@ -1,5 +1,9 @@
+package handlers;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import model.World;
+
 import java.io.IOException;
 import java.io.OutputStream;
 

@@ -1,3 +1,7 @@
+package model;
+
+import interfaces.PersonStorage;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -5,7 +9,7 @@ import java.util.List;
 
 public class World {
 
-    PersonStorage storage;
+    private PersonStorage storage;
 
     public World(PersonStorage storage) {
         this.storage = storage;
@@ -50,10 +54,12 @@ public class World {
 
     @Override
     public String toString() {
-        return "World{" +
+        return "model.World{" +
                 "people=" + storage.getPeople() +
                 '}';
     }
 
-
+    public PersonStorage getPersonStorage() {
+        return storage;
+    }
 }

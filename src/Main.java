@@ -2,6 +2,10 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 
 import com.sun.net.httpserver.HttpServer;
+import handlers.GreetingHandler;
+import handlers.PersonHandler;
+import model.World;
+import storage.LocalPersonStorage;
 
 
 public class Main {
