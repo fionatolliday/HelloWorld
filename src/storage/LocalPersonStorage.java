@@ -26,7 +26,7 @@ public class LocalPersonStorage implements PersonStorage {
     @Override
     public void addPerson(Person person) {
         if (peopleMap.containsKey(person.getName())) {
-            throw new IllegalArgumentException("model.Person already exists. Please choose " +
+            throw new IllegalArgumentException("Person already exists. Please choose " +
                     "another.");
         }
         if (isNameFieldEmpty(person)) {
@@ -55,7 +55,7 @@ public class LocalPersonStorage implements PersonStorage {
        if (peopleMap.containsKey(name)) {
             peopleMap.remove(name.toLowerCase());
         } else throw new IllegalArgumentException(
-                "model.Person does not exist");
+                "Person does not exist");
     }
 
     private boolean isNameFieldEmpty(Person personName) {

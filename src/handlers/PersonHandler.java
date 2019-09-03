@@ -1,12 +1,10 @@
 package handlers;
-
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import parser.QueryParser;
 import Output.WriteResponse;
 import model.Person;
 import model.World;
-
 import java.io.*;
 import java.util.Map;
 
@@ -60,7 +58,7 @@ public class PersonHandler implements HttpHandler {
 
     private String postRequest(HttpExchange request) {
         try {
-            Person person = getPerson(request);
+            Person person = getPerson(request,"name");
             world.getPersonStorage().addPerson(person);
             response = person.getName() + " added";
         } catch (Exception e) {
@@ -72,8 +70,9 @@ public class PersonHandler implements HttpHandler {
 
     private String putRequest(HttpExchange request) {
         try {
-            Person person = getPerson(request);
-            world.getPersonStorage().changePerson(person, person);
+            Person currentName = getPerson(request, "name");
+            Person newName = getPerson(request, "newName");
+            world.getPersonStorage().changePerson(currentName, newName);
             response = "OK, name updated";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
@@ -84,9 +83,9 @@ public class PersonHandler implements HttpHandler {
 
     private String deleteRequest(HttpExchange request) {
         try {
-            Person person = getPerson(request);
+            Person person = getPerson(request,"name");
             world.getPersonStorage().removePerson(person.getName());
-            response = "OK, " + person + " deleted";
+            response = "OK, " + person.getName() + " deleted";
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
         }
@@ -96,21 +95,19 @@ public class PersonHandler implements HttpHandler {
 
     private void notFound(HttpExchange request) throws IOException {
         request.sendResponseHeaders(404, 0);
-        String response = "model.Person not found. Please try again. ";
+        String response = "Person not found. Please try again. ";
         WriteResponse.writeResponse(request, response);
     }
 
 
-    private Person getPerson(HttpExchange request){
+    private Person getPerson(HttpExchange request,String name){
         Map<String, String> requestParams =
                 QueryParser.queryParse(request.getRequestURI().getQuery());
 
-        if (requestParams.containsKey("name")) {
-                return new Person(requestParams.get("name"));
+        if (requestParams.containsKey(name)) {
+                return new Person(requestParams.get(name));
         }
-        else {
-            return new Person(requestParams.get("newName"));
-        }
+        return null;
     }
 
 
