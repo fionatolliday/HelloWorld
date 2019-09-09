@@ -15,8 +15,8 @@ spec:
         app: "fiona-hello-world"
     spec:
       containers:
-        - image: "app"
-          name: HelloWorld.jar
+        - image: "945367126992.dkr.ecr.ap-southeast-2.amazonaws.com/fiona-hello-world:latest"
+          name: app
           ports:
             - containerPort: 8000
 
