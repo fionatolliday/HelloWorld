@@ -1,17 +1,12 @@
-#steps:
-#  - label: ":thumbsup: my first step"
-#    command: echo "Hello World!"
-#    agents:
-#      queue: fma-dev-dflt
-#
-#
-#steps:
-#  - label: ":thumbsup: my first step"
-#    command:
-#      - npm install
-#      - npm run test
-#    agents:
-#      queue: fma-dev-dflt
+
+steps:
+  - label: ":thumbsup: my first step"
+    command:
+      - java install
+      - java run LocalPersonStorageTest
+      - java run WorldTest
+    agents:
+      queue: fma-dev-dflt
 
 # This is an example of a deployment - a declaration of pods.
 ---
