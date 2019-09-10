@@ -12,6 +12,7 @@ steps:
       - run ./buildAndPush.sh
     agents:
       queue: fma-dev-dflt
+
    - label: ":thumbsup: deploy app"
      command:
          - run ./deploy.sh
