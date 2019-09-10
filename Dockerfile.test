@@ -1,4 +1,4 @@
 FROM openjdk:13-alpine
 WORKDIR /app
 COPY . .
-CMD ["./gradlew", "run", "test"]
+CMD ["./gradlew", "build"]
