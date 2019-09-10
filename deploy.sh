@@ -1,1 +1,1 @@
-kubectl -f apply pipeline.yml
+- kubectl -f apply pipeline.yml
