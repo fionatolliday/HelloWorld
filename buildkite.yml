@@ -2,7 +2,7 @@
 steps:
   - label: ":wrench: test!"
     command:
-    - docker build -f Dockerfile.test
+    - docker build -f Dockerfile.test .
     agents:
       queue: fma-dev-dflt
 
