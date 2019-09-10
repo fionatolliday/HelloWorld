@@ -1,8 +1,7 @@
-
 steps:
   - label: ":wrench: test!"
     command:
-    - docker build -f Dockerfile.test .
+      - docker build -f Dockerfile.test .
     agents:
       queue: fma-dev-dflt
 
@@ -10,10 +9,16 @@ steps:
 
   - label: ":thumbsup: build + run app"
     command:
-    - docker build -t app .
-    - docker run --rm app
+      - docker build -t app .
+    #    - docker run --rm app
     agents:
       queue: fma-dev-dflt
+
+#        - label: ":thumbsup: deploy app"
+#            command:
+#              - <cluster name>-<namespace name>
+#            agents:
+#              queue: fma-dev-dflt
 
 
 ### This is an example of a deployment - a declaration of pods.
