@@ -1,5 +1,5 @@
 steps:
-  - label: ":wrench: test!"
+  - label: ":wrench: test code"
     command:
       - docker build -f Dockerfile.test .
     agents:
@@ -7,76 +7,16 @@ steps:
 
   - wait
 
-  - label: ":thumbsup: build + run app"
+  - label: ":thumbsup: build app"
     command:
-      - docker build -t app .
-    #    - docker run --rm app
+      - ./buildAndPush.sh
     agents:
       queue: fma-dev-dflt
 
-#        - label: ":thumbsup: deploy app"
-#            command:
-#              - <cluster name>-<namespace name>
-#            agents:
-#              queue: fma-dev-dflt
+        - label: ":thumbsup: deploy app"
+            command:
+              - ./deploy.sh
+            agents:
+              queue: fma-dev-dflt
 
 
-### This is an example of a deployment - a declaration of pods.
-#---
-#apiVersion: apps/v1
-#kind: Deployment
-#metadata:
-#  name: "fiona-hello-world-deployment"
-#spec:
-#  replicas: 2
-#  selector:
-#    matchLabels:
-#      app: "fiona-hello-world"
-#  template:
-#    metadata:
-#      labels:
-#        app: "fiona-hello-world"
-#    spec:
-#      containers:
-#        - image: "945367126992.dkr.ecr.ap-southeast-2.amazonaws.com/fiona-hello-world:latest"
-#          name: app
-#          ports:
-#            - containerPort: 8000
-#
-### This is an example of a service - a logical grouping of pods
-#---
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: "fiona-hello-world-service"
-#  annotations:
-#    prometheus.io/scrape: "true"
-#spec:
-#  ports:
-#    - port: 8000
-#      targetPort: 8000
-#  selector:
-#    app: "fiona-hello-world"
-#
-## This is an example of an ingress - a way to forward traffic to
-## your services and provide SSL termination.
-#---
-#apiVersion: extensions/v1beta1
-#kind: Ingress
-#metadata:
-#  name: "fiona-hello-world-ingress"
-#  annotations:
-#    "kubernetes.io/tls-acme": "true"
-#spec:
-#  rules:
-#    - host: "fiona-hello-world.svc.platform.myobdev.com"
-#      http:
-#        paths:
-#          - backend:
-#              serviceName: "fiona-hello-world-service"
-#              servicePort: 8000
-#            path: /
-#  tls:
-#    - hosts:
-#        - "fiona-hello-world.svc.platform.myobdev.com"
-#      secretName: "fiona-hello-world-tls"

@@ -1,0 +1,1 @@
+kubectl -f apply pipeline.yml
