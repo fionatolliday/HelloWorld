@@ -9,13 +9,13 @@ steps:
 
   - label: ":thumbsup: build app"
     command:
-      - run ./buildAndPush.sh
+      - ./buildAndPush.sh
     agents:
       queue: fma-dev-dflt
 
   - label: ":thumbsup: deploy app"
     command:
-      - run ./deploy.sh
+      - ./deploy.sh
     agents:
       queue: fma-dev-dflt
 
