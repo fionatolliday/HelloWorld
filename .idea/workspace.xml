@@ -89,6 +89,7 @@
       <change afterPath="$PROJECT_DIR$/../slackTool/CoffeeMachine2/src/MilkDispenser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../slackTool/Mars Rover/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildAndPush.sh" beforeDir="false" afterPath="$PROJECT_DIR$/buildAndPush.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/encodings.xml" beforeDir="false" />
@@ -147,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buildAndPush.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="44">
+              <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -165,8 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pipeline.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="92" />
+            <state relative-caret-position="441">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -318,7 +319,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568240306523" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568241167743" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -737,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/buildkite.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -751,17 +745,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pipeline.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="92" />
+        <state relative-caret-position="441">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/buildAndPush.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="44">
+          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
         </state>
       </provider>
     </entry>
