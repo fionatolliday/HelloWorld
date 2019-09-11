@@ -89,7 +89,7 @@
       <change afterPath="$PROJECT_DIR$/../slackTool/CoffeeMachine2/src/MilkDispenser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../slackTool/Mars Rover/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildkite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buildkite.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/encodings.xml" beforeDir="false" />
@@ -136,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/buildkite.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -154,7 +154,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -280,8 +280,8 @@
         <option value="$PROJECT_DIR$/buildkite/pipeline.yml" />
         <option value="$PROJECT_DIR$/pipeline.yml" />
         <option value="$PROJECT_DIR$/buildAndPush.sh" />
-        <option value="$PROJECT_DIR$/buildkite.yml" />
         <option value="$PROJECT_DIR$/deploy.sh" />
+        <option value="$PROJECT_DIR$/buildkite.yml" />
       </list>
     </option>
   </component>
@@ -319,7 +319,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568242733820" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568242796208" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -477,7 +477,7 @@
     <frame x="-1009" y="-1057" width="1622" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.16898735" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.16898735" />
       <window_info id="Structure" order="1" sideWeight="0.50164473" side_tool="true" weight="0.2783883" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -491,7 +491,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32938388" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29717514" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29717514" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003077" side_tool="true" weight="0.23321554" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32911393" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21682465" />
@@ -752,17 +752,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildkite.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildkite.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
         </state>
       </provider>
     </entry>

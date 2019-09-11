@@ -13,6 +13,8 @@ steps:
     agents:
       queue: fma-dev-dflt
 
+  - wait
+
   - label: ":thumbsup: deploy app"
     command:
       - ./deploy.sh
