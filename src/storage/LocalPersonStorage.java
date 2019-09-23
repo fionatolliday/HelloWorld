@@ -37,6 +37,7 @@ public class LocalPersonStorage implements PersonStorage {
 
     @Override
     public void changePerson(Person currentPerson, Person newName) {
+
         removePerson(currentPerson.getName());
         try {
             addPerson(newName);
@@ -65,4 +66,5 @@ public class LocalPersonStorage implements PersonStorage {
         }
         return false;
     }
+
 }

@@ -40,10 +40,11 @@ public class PersonHandler implements HttpHandler {
         }
 
 
-        request.sendResponseHeaders(200, response.length());
+//        request.sendResponseHeaders(200, response.length());
         WriteResponse.writeResponse(request, response);
         request.close();
     }
+
 
 
     private String getRequest() {
@@ -56,38 +57,46 @@ public class PersonHandler implements HttpHandler {
     }
 
 
-    private String postRequest(HttpExchange request) {
+    private String postRequest(HttpExchange request) throws IOException {
+
         try {
             Person person = getPerson(request,"name");
             world.getPersonStorage().addPerson(person);
             response = person.getName() + " added";
+            request.sendResponseHeaders(201, 0);
         } catch (Exception e) {
+            request.sendResponseHeaders(400, 0);
             response = "Could not be executed.  Exception thrown: " + e;
         }
         return response;
     }
 
 
-    private String putRequest(HttpExchange request) {
+    private String putRequest(HttpExchange request) throws IOException {
         try {
             Person currentName = getPerson(request, "name");
             Person newName = getPerson(request, "newName");
             world.getPersonStorage().changePerson(currentName, newName);
             response = "OK, name updated";
+            request.sendResponseHeaders(200, 0);
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
+            request.sendResponseHeaders(400, 0);
         }
         return response;
     }
 
 
-    private String deleteRequest(HttpExchange request) {
+    private String deleteRequest(HttpExchange request) throws IOException {
         try {
             Person person = getPerson(request,"name");
             world.getPersonStorage().removePerson(person.getName());
             response = "OK, " + person.getName() + " deleted";
+            request.sendResponseHeaders(200, 0);
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
+            request.sendResponseHeaders(400, 0);
+
         }
         return response;
     }
