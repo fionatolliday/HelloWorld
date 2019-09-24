@@ -1,7 +1,6 @@
 package model;
-
+import interfaces.DateTimeInterface;
 import interfaces.PersonStorage;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -10,9 +9,11 @@ import java.util.List;
 public class World {
 
     private PersonStorage storage;
+    private DateTimeInterface dateTime;
 
-    public World(PersonStorage storage) {
+    public World(PersonStorage storage, DateTimeInterface dateTime) {
         this.storage = storage;
+        this.dateTime = dateTime;
         Person fiona = new Person("fiona");
         this.storage.addPerson(fiona);
     }
@@ -27,17 +28,18 @@ public class World {
     }
 
 
-    private String dateTime() {
-        LocalDateTime myDateObj = LocalDateTime.now();
+//    public String dateTime() {
+//        LocalDateTime myDateObj = LocalDateTime.now();
+//
+//        DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
+//        DateTimeFormatter formattedDate = DateTimeFormatter.ofPattern("dd MMMM yyyy");
+//
+//        String time = myDateObj.format(formattedTime);
+//        String date = myDateObj.format(formattedDate);
+//
+//        return " - the time on the server is " + time + " on " + date;
+//    }
 
-        DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
-        DateTimeFormatter formattedDate = DateTimeFormatter.ofPattern("dd MMMM yyyy");
-
-        String time = myDateObj.format(formattedTime);
-        String date = myDateObj.format(formattedDate);
-
-        return " - the time on the server is " + time + " on " + date;
-    }
 
 
     public String greet() {
@@ -49,17 +51,20 @@ public class World {
                 .concat(names.get(people.size() - 1))
                 : names.get(0);
 
-        return "Hello " + nameString + dateTime();
+        return "Hello " + nameString + dateTime.getDateTime();
     }
 
     @Override
     public String toString() {
-        return "model.World{" +
-                "people=" + storage.getPeople() +
+        return "World{" +
+                "storage=" + storage.getPeople() +
+                ", dateTime=" + dateTime.getDateTime() +
                 '}';
     }
+
 
     public PersonStorage getPersonStorage() {
         return storage;
     }
+
 }

@@ -39,13 +39,9 @@ public class PersonHandler implements HttpHandler {
                 notFound(request);
         }
 
-
-//        request.sendResponseHeaders(200, response.length());
         WriteResponse.writeResponse(request, response);
         request.close();
     }
-
-
 
     private String getRequest() {
         try {
@@ -56,7 +52,6 @@ public class PersonHandler implements HttpHandler {
         return response;
     }
 
-
     private String postRequest(HttpExchange request) throws IOException {
 
         try {
@@ -65,8 +60,8 @@ public class PersonHandler implements HttpHandler {
             response = person.getName() + " added";
             request.sendResponseHeaders(201, 0);
         } catch (Exception e) {
-            request.sendResponseHeaders(400, 0);
             response = "Could not be executed.  Exception thrown: " + e;
+            request.sendResponseHeaders(400, 0);
         }
         return response;
     }
@@ -96,7 +91,6 @@ public class PersonHandler implements HttpHandler {
         } catch (Exception e) {
             response = "Cannot proceed. Exception " + e;
             request.sendResponseHeaders(400, 0);
-
         }
         return response;
     }
@@ -118,9 +112,6 @@ public class PersonHandler implements HttpHandler {
         }
         return null;
     }
-
-
-
 }
 
 
