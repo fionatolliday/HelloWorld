@@ -84,8 +84,8 @@ public class PersonHandler implements HttpHandler {
 
     private String deleteRequest(HttpExchange request) throws IOException {
         try {
-            Person person = getPerson(request,"name");
-            world.getPersonStorage().removePerson(person.getName());
+            Person person = getPerson(request, "name");
+            world.getPersonStorage().removePerson(person);
             response = "OK, " + person.getName() + " deleted";
             request.sendResponseHeaders(200, 0);
         } catch (Exception e) {

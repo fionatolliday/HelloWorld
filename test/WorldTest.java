@@ -33,7 +33,6 @@ public class WorldTest {
         String expectedGreeting = "Hello fiona and renae - the time on the server is time on " +
                 "this date";
 
-
         String actualGreeting = world.greet();
 
         Assert.assertEquals(expectedGreeting, actualGreeting);
@@ -45,10 +44,9 @@ public class WorldTest {
         Person Bianca = new Person("Bianca");
         storage.addPerson(Bianca);
         storage.addPerson(Renae);
-        storage.removePerson("renae");
+        storage.removePerson(Renae);
 
         String expectedGreeting = "Hello fiona and bianca - the time on the server is time on this date";
-
 
         String actualGreeting = world.greet();
 
@@ -65,10 +63,53 @@ public class WorldTest {
 
         String expectedGreeting = "Hello fiona, bianca and anton - the time on the server is time on this date";
 
-
         String actualGreeting = world.greet();
 
         Assert.assertEquals(expectedGreeting, actualGreeting);
     }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void personAlreadyExists() {
+        Person Fiona = new Person("fiona");
+        storage.addPerson(Fiona);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void nameFieldIsEmptyWhenAddingPerson() {
+        Person noName = new Person("");
+        storage.addPerson(noName);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void personDoesNotExistToRemove() {
+        Person Bianca = new Person("bianca");
+        Person Renae = new Person("renae");
+        storage.changePerson(Renae, Bianca);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void nameFieldIsEmptyWhenChangingToNewPerson() {
+        Person Bianca = new Person("");
+        Person Renae = new Person("renae");
+        storage.changePerson(Renae, Bianca);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void personAlreadyExistsWhenChangingToNewPerson() {
+        Person Bianca = new Person("bianca");
+        Person Renae = new Person("renae");
+        storage.addPerson(Renae);
+        storage.addPerson(Bianca);
+        storage.changePerson(Renae, Bianca);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void cannotRemoveFiona() {
+        Person Fiona = new Person("fiona");
+        storage.addPerson(Fiona);
+        storage.removePerson(Fiona);
+    }
+
 
 }

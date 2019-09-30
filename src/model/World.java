@@ -1,6 +1,8 @@
 package model;
+
 import interfaces.DateTimeInterface;
 import interfaces.PersonStorage;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -27,32 +29,32 @@ public class World {
         return names;
     }
 
-
-//    public String dateTime() {
-//        LocalDateTime myDateObj = LocalDateTime.now();
-//
-//        DateTimeFormatter formattedTime = DateTimeFormatter.ofPattern("hh:mma");
-//        DateTimeFormatter formattedDate = DateTimeFormatter.ofPattern("dd MMMM yyyy");
-//
-//        String time = myDateObj.format(formattedTime);
-//        String date = myDateObj.format(formattedDate);
-//
-//        return " - the time on the server is " + time + " on " + date;
-//    }
-
-
-
     public String greet() {
         List<String> names = getNamesOfPeople();
-        List<Person> people = storage.getPeople();
-        String nameString = names.size() > 1
-                ? String.join(", ", names.subList(0, people.size() - 1))
-                .concat(String.format("%s and ", people.size() > 2 ? "" : ""))
-                .concat(names.get(people.size() - 1))
-                : names.get(0);
+        int numberOfNamesStored = names.size();
 
-        return "Hello " + nameString + dateTime.getDateTime();
+
+        if (numberOfNamesStored == 2) {
+            String twoNamesInArray = String.join(" and ", names);
+            return "Hello " + twoNamesInArray + dateTime.getDateTime();
+        }
+
+        if (numberOfNamesStored > 2) {
+
+            int indexOfFinalName = names.size() - 1;
+            List<String> arrayMinusFinalName = names.subList(0, names.size() - 1);
+            String namesMinusFinal = String.join(", ", arrayMinusFinalName);
+            String finalName = names.get(indexOfFinalName);
+
+            return "Hello " + namesMinusFinal + " and " + finalName + dateTime.getDateTime();
+        }
+
+        else {
+            String firstName = names.get(0);
+            return "Hello " + firstName + dateTime.getDateTime();
+        }
     }
+
 
     @Override
     public String toString() {

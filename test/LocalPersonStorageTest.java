@@ -18,7 +18,7 @@ public class LocalPersonStorageTest {
         storage.addPerson(Renae);
         storage.addPerson(Bianca);
 
-        storage.removePerson("renae");
+        storage.removePerson(Renae);
 
 
         List<Person> expectedListOfPeople = Arrays.asList(Bianca);
@@ -26,5 +26,7 @@ public class LocalPersonStorageTest {
 
         Assert.assertEquals(expectedListOfPeople, actualListOfPeople);
     }
+
+
 
 }

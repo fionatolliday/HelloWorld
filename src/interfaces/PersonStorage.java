@@ -12,6 +12,6 @@ public interface PersonStorage {
 
     void changePerson(Person currentPerson, Person newName);
 
-    void removePerson(String name);
+    void removePerson(Person person);
 
 }
