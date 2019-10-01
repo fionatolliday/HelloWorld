@@ -1,15 +1,11 @@
-import com.sun.net.httpserver.HttpServer;
-import handlers.GreetingHandler;
-import handlers.PersonHandler;
-import model.DateTime;
 import model.MockDateTimeTest;
+import model.Server;
 import model.World;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import storage.LocalPersonStorage;
 import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
 import java.io.IOException;
 import java.net.URL;
 import static junit.framework.TestCase.assertEquals;
@@ -18,21 +14,16 @@ import static junit.framework.TestCase.assertEquals;
 public class AcceptanceTest {
 
     World world = new World(new LocalPersonStorage(), new MockDateTimeTest());
-    HttpServer server;
+    Server server = new Server(world);
 
     @Before
     public void serverOn() throws IOException {
-        server = HttpServer.create(new InetSocketAddress(5000), 0);
-
-        server.createContext("/greeting", new GreetingHandler(world));
-        server.createContext("/names", new PersonHandler(world));
-        server.setExecutor(null); // creates a default executor. this submits a new task
-        server.start();
+        server.runServer(5000);
     }
 
     @After
-    public void serverClose() {
-        server.stop(0);
+    public void serverStop() throws IOException{
+        server.stopServer();
     }
 
 

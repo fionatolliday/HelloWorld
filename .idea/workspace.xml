@@ -89,8 +89,8 @@
       <change afterPath="$PROJECT_DIR$/../slackTool/CoffeeMachine2/src/MilkDispenser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../slackTool/Mars Rover/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HelloWorld/AcceptanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloWorld/AcceptanceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/AcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AcceptanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/description.html" beforeDir="false" />
@@ -142,11 +142,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,15 +154,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/AcceptanceTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+            <state relative-caret-position="484">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/AcceptanceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,8 +194,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/handlers/GreetingHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="220">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,7 +221,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/LocalPersonStorage.java" />
         <option value="$PROJECT_DIR$/src/enums/StatusCodes.java" />
         <option value="$PROJECT_DIR$/src/MyHandler.java" />
         <option value="$PROJECT_DIR$/src/RootHandler.java" />
@@ -241,14 +263,15 @@
         <option value="$PROJECT_DIR$/src/interfaces/PersonStorage.java" />
         <option value="$PROJECT_DIR$/src/handlers/PersonHandler.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/model/World.java" />
         <option value="$PROJECT_DIR$/test/LocalPersonStorageTest.java" />
         <option value="$PROJECT_DIR$/src/handlers/GreetingHandler.java" />
         <option value="$PROJECT_DIR$/src/storage/LocalPersonStorage.java" />
         <option value="$PROJECT_DIR$/test/WorldTest.java" />
         <option value="$PROJECT_DIR$/src/Server.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/model/World.java" />
         <option value="$PROJECT_DIR$/test/AcceptanceTest.java" />
+        <option value="$PROJECT_DIR$/src/model/Server.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -290,6 +313,12 @@
               <item name="HelloWorld" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -308,7 +337,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569899027910" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569901625026" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -353,7 +382,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="HelloWorld" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HelloWorld" />
       <option name="PACKAGE_NAME" value="" />
@@ -393,23 +429,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HelloWorld" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AcceptanceTest" />
-      <option name="METHOD_NAME" value="putRequestOnNameHandlerReturnsOKNameUpdated" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AcceptanceTest" />
         <item itemvalue="JUnit.AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" />
         <item itemvalue="JUnit.AcceptanceTest.deleteRequestOnNameHandlerReturnsOKMarceloDeleted" />
         <item itemvalue="JUnit.AcceptanceTest.postRequestOnNameHandlerReturns200Status" />
-        <item itemvalue="JUnit.AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" />
-        <item itemvalue="JUnit.AcceptanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -427,18 +453,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AcceptanceTest - 2019.09.30 at 15h 46m 26s.xml">
-      <configuration name="AcceptanceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest - 2019.09.30 at 15h 47m 25s.xml">
-      <configuration name="AcceptanceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 47m 49s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 50m 07s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 50m 26s.xml">
       <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
     </history-entry>
@@ -456,6 +470,18 @@
     </history-entry>
     <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 02m 57s.xml">
       <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 03m 50s.xml">
+      <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 04m 04s.xml">
+      <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest - 2019.10.01 at 13h 28m 10s.xml">
+      <configuration name="AcceptanceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest - 2019.10.01 at 13h 30m 56s.xml">
+      <configuration name="AcceptanceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -480,12 +506,12 @@
       <window_info id="Favorites" order="6" sideWeight="0.50164473" side_tool="true" weight="0.2783883" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.146145" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990099" visible="true" weight="0.2476415" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990099" visible="true" weight="0.20636792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2635135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32938388" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966997" weight="0.091981135" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966997" weight="0.095518865" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50033003" side_tool="true" weight="0.21979287" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32911393" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21605667" />
@@ -777,18 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2460#2461#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/LocalPersonStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -844,18 +858,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/handlers/GreetingHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state relative-caret-position="220">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/model/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="132">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -864,12 +878,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/AcceptanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+        <state relative-caret-position="594">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
