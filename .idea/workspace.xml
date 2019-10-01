@@ -89,24 +89,9 @@
       <change afterPath="$PROJECT_DIR$/../slackTool/CoffeeMachine2/src/MilkDispenser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../slackTool/Mars Rover/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/HelloWorld_jar/HelloWorld.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HelloWorld_jar/HelloWorld.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloWorld/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloWorld/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloWorld/handlers/PersonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloWorld/handlers/PersonHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloWorld/interfaces/PersonStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloWorld/interfaces/PersonStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloWorld/model/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloWorld/model/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloWorld/storage/LocalPersonStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloWorld/storage/LocalPersonStorage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HelloWorld/LocalPersonStorageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloWorld/LocalPersonStorageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/HelloWorld/WorldTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloWorld/WorldTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/PersonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/PersonHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/PersonStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/PersonStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/LocalPersonStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/LocalPersonStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/LocalPersonStorageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/LocalPersonStorageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/WorldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/WorldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/HelloWorld/AcceptanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/HelloWorld/AcceptanceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/AcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/AcceptanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/description.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/encodings.xml" beforeDir="false" />
@@ -156,7 +141,7 @@
     <favorites_list name="HelloWorld" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -172,12 +157,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/AcceptanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="131" column="38" selection-start-line="131" selection-start-column="38" selection-end-line="131" selection-end-column="38" />
+            <state relative-caret-position="393">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/handlers/GreetingHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -255,11 +252,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
     <option name="y" value="23" />
-    <option name="width" value="1891" />
-    <option name="height" value="970" />
+    <option name="width" value="1671" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -270,6 +267,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -286,6 +284,12 @@
               <item name="HelloWorld" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,7 +301,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,7 +308,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569822826200" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569899027910" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -350,14 +353,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="HelloWorld" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HelloWorld" />
       <option name="PACKAGE_NAME" value="" />
@@ -377,6 +373,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AcceptanceTest" />
+      <option name="METHOD_NAME" value="getRequestOnGreetingHandlerReturnsGreeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AcceptanceTest.postRequestOnNameHandlerReturns200Status" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HelloWorld" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AcceptanceTest" />
+      <option name="METHOD_NAME" value="postRequestOnNameHandlerReturns200Status" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HelloWorld" />
       <option name="PACKAGE_NAME" value="" />
@@ -387,23 +403,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKPersonUpdated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HelloWorld" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AcceptanceTest" />
-      <option name="METHOD_NAME" value="putRequestOnNameHandlerReturnsOKPersonUpdated" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" />
+        <item itemvalue="JUnit.AcceptanceTest.deleteRequestOnNameHandlerReturnsOKMarceloDeleted" />
+        <item itemvalue="JUnit.AcceptanceTest.postRequestOnNameHandlerReturns200Status" />
         <item itemvalue="JUnit.AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" />
         <item itemvalue="JUnit.AcceptanceTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AcceptanceTest.putRequestOnNameHandlerReturnsOKPersonUpdated" />
-        <item itemvalue="JUnit.AcceptanceTest.deleteRequestOnNameHandlerReturnsOKMarceloDeleted" />
       </list>
     </recent_temporary>
   </component>
@@ -421,21 +427,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 41m 25s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 41m 37s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 42m 28s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 42m 35s.xml">
-      <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AcceptanceTest - 2019.09.30 at 15h 45m 24s.xml">
-      <configuration name="AcceptanceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AcceptanceTest - 2019.09.30 at 15h 46m 26s.xml">
       <configuration name="AcceptanceTest" configurationId="JUnit" />
     </history-entry>
@@ -451,6 +442,21 @@
     <history-entry file="AcceptanceTest_putRequestOnNameHandlerReturnsOKNameUpdated - 2019.09.30 at 15h 50m 26s.xml">
       <configuration name="AcceptanceTest.putRequestOnNameHandlerReturnsOKNameUpdated" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AcceptanceTest_postRequestOnNameHandlerReturns200Status - 2019.10.01 at 08h 57m 57s.xml">
+      <configuration name="AcceptanceTest.postRequestOnNameHandlerReturns200Status" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_deleteRequestOnNameHandlerReturnsOKMarceloDeleted - 2019.10.01 at 08h 58m 01s.xml">
+      <configuration name="AcceptanceTest.deleteRequestOnNameHandlerReturnsOKMarceloDeleted" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 02m 03s.xml">
+      <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 02m 49s.xml">
+      <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AcceptanceTest_getRequestOnGreetingHandlerReturnsGreeting - 2019.10.01 at 13h 02m 57s.xml">
+      <configuration name="AcceptanceTest.getRequestOnGreetingHandlerReturnsGreeting" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,10 +468,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="23" width="1671" height="940" extended-state="6" />
+    <frame x="2" y="23" width="1671" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.25414366" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.25721303" />
       <window_info id="Structure" order="1" sideWeight="0.50164473" side_tool="true" weight="0.2783883" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -474,12 +480,12 @@
       <window_info id="Favorites" order="6" sideWeight="0.50164473" side_tool="true" weight="0.2783883" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.146145" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990099" visible="true" weight="0.24882075" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990099" visible="true" weight="0.2476415" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2635135" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32938388" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966997" weight="0.2150901" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49966997" weight="0.091981135" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50033003" side_tool="true" weight="0.21979287" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32911393" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21605667" />
@@ -825,30 +831,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/handlers/GreetingHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/handlers/PersonHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/handlers/GreetingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -867,12 +864,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/AcceptanceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="131" column="38" selection-start-line="131" selection-start-column="38" selection-end-line="131" selection-end-column="38" />
+        <state relative-caret-position="393">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
           </folding>
         </state>
       </provider>
